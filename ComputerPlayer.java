@@ -41,6 +41,7 @@ public class ComputerPlayer implements Player {
         this.sets += sets;
     }
 
+    //until here coded by Chaya Kanevski.Play method coded by Shana Szanzer
     @Override
     public Card play() {
         //checking to see if the computer's hand is empty
