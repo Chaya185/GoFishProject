@@ -66,6 +66,7 @@ public class ComputerPlayer implements Player {
         return cardToPlay;
     }
 
+    //coded by Chaya Kanevski
     @Override
     public int checkForSets() {
         int sets = 0;
