@@ -67,6 +67,7 @@ public class GoFishGame implements Game {
         }
     }
 
+    //until here coded by Chaya, PlayTurn() coded by shana
     @Override
     public void playTurn(Player player) {
         // Implement the game logic for playing a turn here
@@ -140,6 +141,7 @@ public class GoFishGame implements Game {
         return null;
     }
 
+    //determineWinner() coded by Chaya Kanevski
     private Player determineWinner() {
         Player winner = null;
         int maxSets = -1;
