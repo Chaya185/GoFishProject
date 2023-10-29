@@ -1,3 +1,4 @@
+// Coded by Chaya Kanevski
 package GoFishProject;
 public class ImplementCard implements Card {
     private String suit;
