@@ -51,6 +51,7 @@ public class HumanPlayer implements Player {
         hand.remove(card);
     }
 
+    //until here coded by Chaya, play() coded by Shana
     @Override
     public Card play() {
         if (hand.isEmpty()) {
@@ -83,6 +84,7 @@ public class HumanPlayer implements Player {
 
     }
 
+    //coded by Chaya Kanevski
     public int checkForSets() {
         int sets = 0;
         int i = 0;
