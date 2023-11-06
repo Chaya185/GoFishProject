@@ -13,6 +13,7 @@ public class GoFishGame implements Game {
     }
 
     @Override
+    //handles the flow of the game
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
 
@@ -52,8 +53,8 @@ public class GoFishGame implements Game {
     }
 
     @Override
+    //determines if the game is over and returns corresponding boolean value
     public boolean isGameOver() {
-        // Implement the game-over condition here
         // The game is over if the deck is empty or if any player's hand is empty.
         if (deck.isEmpty()) {
             return true;
@@ -69,12 +70,13 @@ public class GoFishGame implements Game {
 
     //until here coded by Chaya, PlayTurn() coded by shana
     @Override
+    //game logic for playing a turn. It accepts the current player playing 
     public void playTurn(Player player) {
-        // Implement the game logic for playing a turn here
-        // You need to find the opponent for the current player
-
+        
+        //finds the opponent for the current player
         Player opponent = findOpponent(player);
 
+        //gets the card the player is asking for
         Card card = player.play();
 
         //variable to store the card rank searching for
@@ -102,22 +104,21 @@ public class GoFishGame implements Game {
             System.out.println(opponent.getName() + " says 'Go Fish.'\n");
             // Draw a card from the deck
             Card drawnCard = deck.drawCard();
-            //for some reason it adds 2 cards
             player.addToHand(drawnCard);
             if(drawnCard == card) {
             	System.out.println(player.getName() + " picked their wish! ");
             }
-          
         }
         // Check if the drawn card makes a set
         int sets = player.checkForSets();
         player.setSets(sets);
 
-
+        //display number sets the player has
         System.out.println(player.getName() + " has " + player.getSets() + " set(s)");
     }
 
     @Override
+    //handles the ending of a game and displays results
     public void endGame() {
         // Implement game-ending actions here
         System.out.println("\nGame Over!");
@@ -142,11 +143,13 @@ public class GoFishGame implements Game {
     }
 
     //determineWinner() coded by Chaya Kanevski
+    //determines the winner and returns the winning player
     private Player determineWinner() {
         Player winner = null;
         int maxSets = -1;
         boolean tie = false;
 
+        //checks how many sets each player has and determines which has more sets
         for (Player player : players) {
             System.out.println(player.getName() + " has " + player.getSets() + " sets."); // Debugging
             int sets = player.getSets();
