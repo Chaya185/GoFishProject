@@ -11,10 +11,11 @@ public class Main {
         Deck deck = new ImplementDeck();
         List<Player> players = new ArrayList<>();
         
-        // Create human and computer players
+        // Create human and computer players' play cards list
         List<Card> humanHand = new ArrayList<>();
         List<Card> computerHand = new ArrayList<>();
-        
+
+        //create the players 
         Player humanPlayer = new HumanPlayer("Player", humanHand, sets);
         Player computerPlayer = new ComputerPlayer("Computer", computerHand, sets);
         
