@@ -8,11 +8,13 @@ public class ComputerPlayer implements Player {
     private int sets = 0;
 
     public ComputerPlayer(String name, List<Card> hand, int sets) {
+        //computerPlayer fields
         this.name = name;
         this.hand = hand;
         this.sets = sets;
     }
 
+    //getters and setters for the fields
     @Override
     public String getName() {
         return name;
@@ -61,6 +63,7 @@ public class ComputerPlayer implements Player {
         Card cardToPlay = hand.get(index);
 
 
+        //display for user
         System.out.println(getName() + " asks for a " + cardToPlay);
 
         return cardToPlay;
@@ -68,6 +71,7 @@ public class ComputerPlayer implements Player {
 
     //coded by Chaya Kanevski
     @Override
+    //this method checks for sets and removes the set cards from the players hand
     public int checkForSets() {
         int sets = 0;
         int i = 0;
