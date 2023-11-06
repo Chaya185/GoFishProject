@@ -9,10 +9,9 @@ public class HumanPlayer implements Player {
     private int hSetCounter;
     private int sets = 0;
 
-
     Scanner scanner = new Scanner(System.in);
 
-    //constructor 
+    //constructor receiving fields and initializing them
     public HumanPlayer(String name, List<Card> hand, int sets) {
         this.name = name;
         this.hand = hand;
@@ -89,6 +88,7 @@ public class HumanPlayer implements Player {
     }
 
     //coded by Chaya Kanevski
+    //checks for sets, removes those cards from the players hand and returns their number of sets
     public int checkForSets() {
         int sets = 0;
         int i = 0;
