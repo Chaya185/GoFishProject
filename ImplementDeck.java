@@ -23,7 +23,7 @@ public class ImplementDeck implements Deck{
     }
 
     @Override
-    //the drawCard method removes the top card from the deck if the deck is not empty
+    //the drawCard method removes and returns the top card from the deck if the deck is not empty
     public Card drawCard(){
         if (!cards.isEmpty()){
             return cards.remove(0);
@@ -37,7 +37,7 @@ public class ImplementDeck implements Deck{
         Collections.shuffle(cards);
     }
 
-    //checks if the deck is empty and returns true or false 
+    //checks if the deck is empty and returns corresponding boolean of true or false 
     public Boolean isEmpty(){
         if (cards.size() == 0){
             return true;
