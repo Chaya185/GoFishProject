@@ -7,6 +7,7 @@ public class ComputerPlayer implements Player {
     private List<Card> hand;
     private int sets = 0;
 
+    //constructor receiving player fields and initializing fields
     public ComputerPlayer(String name, List<Card> hand, int sets) {
         //computerPlayer fields
         this.name = name;
@@ -45,6 +46,7 @@ public class ComputerPlayer implements Player {
 
     //until here coded by Chaya Kanevski.Play method coded by Shana Szanzer
     @Override
+    //handles the playlers play
     public Card play() {
         //checking to see if the computer's hand is empty
         if (hand.isEmpty()) {
@@ -62,7 +64,6 @@ public class ComputerPlayer implements Player {
         int index = random.nextInt(hand.size());
         Card cardToPlay = hand.get(index);
 
-
         //display for user
         System.out.println(getName() + " asks for a " + cardToPlay);
 
@@ -71,7 +72,7 @@ public class ComputerPlayer implements Player {
 
     //coded by Chaya Kanevski
     @Override
-    //this method checks for sets and removes the set cards from the players hand
+    //this method checks for sets and removes the set cards from the players hand. It returns the players number of sets
     public int checkForSets() {
         int sets = 0;
         int i = 0;
