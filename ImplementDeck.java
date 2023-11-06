@@ -9,6 +9,7 @@ public class ImplementDeck implements Deck{
         initializeDeck();
     }
 
+    //this method creates a new deck
     private void initializeDeck(){
         cards = new ArrayList<>();
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
@@ -22,6 +23,7 @@ public class ImplementDeck implements Deck{
     }
 
     @Override
+    //the drawCard method removes the top card from the deck if the deck is not empty
     public Card drawCard(){
         if (!cards.isEmpty()){
             return cards.remove(0);
@@ -30,10 +32,12 @@ public class ImplementDeck implements Deck{
     }
 
     @Override
+    //shuffles the deck
     public void shuffleDeck(){
         Collections.shuffle(cards);
     }
 
+    //checks if the deck is empty and returns true or false 
     public Boolean isEmpty(){
         if (cards.size() == 0){
             return true;
