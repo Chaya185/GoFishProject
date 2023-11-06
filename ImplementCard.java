@@ -20,7 +20,7 @@ public class ImplementCard implements Card {
         return this.suit;
     }
 
-    //toString method for display
+    //toString method for display that returns a string
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(rank);
